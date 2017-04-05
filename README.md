@@ -1,3 +1,3 @@
 # alert-server
 
-Soon a great README file here.
+Web server portion of the notification app.
