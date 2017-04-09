@@ -2,7 +2,7 @@ var settings = {}
 
 // DB Settings
 registerSetting('mongo.mongoConnectionUriBase', 'mongodb://localhost:27017/', 'MONGODB_URI_BASE', false)
-registerSetting('mongo.dbName', 'alert-server', 'MONGODB_NAME', false);
+registerSetting('mongo.dbName', 'alertServer', 'MONGODB_NAME', false);
 registerSetting('mongo.mongoConnectionUriFull', settings.mongo.mongoConnectionUriBase + settings.mongo.dbName, 'MONGODB_URI', false);
 
 // Server Settings
