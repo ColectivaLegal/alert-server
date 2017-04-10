@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const request = require('request-promise-native');
 
-const BASE_URI = 'https://ushahidi-platform-test2017a.herokuapp.com';
+const BASE_URI = require('../settings.js').externalSites.ushahidi.uriBase;
 
 function createPost(token) {
   let options = {

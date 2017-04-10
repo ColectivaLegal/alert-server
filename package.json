@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "cross-env PORT=3001 MONGODB_NAME=alertServer_test mocha --recursive test" ,
     "start": "node ./bin/www",
     "debug": "DEBUG=alert-server:* nodemon ./bin/www"
   },
@@ -12,9 +13,16 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "jade": "~1.11.0",
+    "mongoose": "^4.9.4",
     "morgan": "~1.8.1",
     "request": "^2.81.0",
     "request-promise-native": "^1.0.3",
     "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "cross-env": "^4.0.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
   }
 }
