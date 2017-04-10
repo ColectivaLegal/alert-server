@@ -1,5 +1,7 @@
 # alert-server
 
+[![Build Status](https://travis-ci.org/ColectivaLegal/alert-server.svg?branch=develop)](https://travis-ci.org/ColectivaLegal/alert-server)
+
 Installation dependencies:
 - requires nodeJS
 - requires mongoDB
