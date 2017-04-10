@@ -5,17 +5,9 @@ const User = require('../../models/user.js').User;
 
 
 describe('User Model', () => {
-    let username = 'foo';
-    let password = 'bar';
-
-    before('Connect to database', (done) => {
-        db.connect(done);
-    })
-
     before('Reset database', (done) => {
         // TODO:  Give our db exports a direct way to drop the database, without going through mongoose in the test suite.
         db.db.dropDatabase((err) => {
-            console.log("db reset")
             done(err);
         });
     })
@@ -42,7 +34,6 @@ describe('User Model', () => {
 
     it('Should not successfully verify when given an incorrect secret', (done) => {
         let user = new User();
-        console.log(user);
         assert.isFalse(user.is_verified);
         assert.isFalse(user.verify('12345'));
         assert.isFalse(user.is_verified);
