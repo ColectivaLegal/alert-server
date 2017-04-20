@@ -14,8 +14,11 @@ registerSetting('routing.apiRoot', '/api', 'API_ROOT', false);
 // Branding
 registerSetting('branding.name', 'AlertServer', 'BRANDING_NAME', false);
 
-// External dependencies
-registerSetting('externalSites.ushahidi.uriBase', 'https://ushahidi-platform-test2017a.herokuapp.com', 'USHAHIDI_URI_BASE', false);
+// Ushahidi
+registerSetting('ushahidi.uriBase', 'https://ushahidi-platform-test2017a.herokuapp.com', 'USHAHIDI_URI_BASE', false);
+registerSetting('ushahidi.username', null, 'USHAHIDI_USERNAME', true);
+registerSetting('ushahidi.password', null, 'USHAHIDI_PASSWORD', true);
+registerSetting('ushahidi.secret', null, 'USHAHIDI_SECRET', true);
 
 // registerSetting
 //
