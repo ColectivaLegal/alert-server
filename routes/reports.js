@@ -10,7 +10,7 @@ function createPost(token, post) {
     method: 'POST',
     uri: `${BASE_URI}/api/v3/posts`,
     body: {
-      title: 'Let\'s see how this API works (8)',
+      title: `New alert from ${post.phone}`,
       content: post.content,
       locale: 'en_US',
       form: '2',
