@@ -5,20 +5,20 @@ const settings = require('../settings.js');
 
 const BASE_URI = settings.ushahidi.uriBase;
 
-function createPost(token) {
+function createPost(token, post) {
   let options = {
     method: 'POST',
     uri: `${BASE_URI}/api/v3/posts`,
     body: {
       title: 'Let\'s see how this API works (8)',
-      content: 'Foo bar',
+      content: post.content,
       locale: 'en_US',
       form: '2',
       values: {
         location_default: [
           {
-            lat: 47.8062,
-            lon: -121.3321
+            lat: post.lat,
+            lon: post.long
           }
         ]
       },
@@ -55,7 +55,7 @@ router.post('/', function(req, res, next) {
   let promise = authenticate();
 
   promise = promise.then(function(auth) {
-    return createPost(auth.access_token);
+    return createPost(auth.access_token, req.body);
   });
 
   promise = promise.then(function(post) {
